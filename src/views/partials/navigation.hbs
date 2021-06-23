@@ -1,0 +1,9 @@
+{{#if user}}
+    <button><a style="text-decoration: none;" href="/recipes">All Recipes</a></button>
+    <button><a style="text-decoration: none;" href="/recipes/add">Add A Recipe</a></button>
+    <button><a style="text-decoration: none;" href="/profile">Profile</a></button>
+    <button><a style="text-decoration: none;" href="/logout">Log Out</a></button>
+{{else}}
+    <button><a style="text-decoration: none;" href="/signup">Sign Up</a></button>
+    <button><a style="text-decoration: none;" href="/signin">Sign In</a></button>
+{{/if}}

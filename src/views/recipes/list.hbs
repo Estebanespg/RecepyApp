@@ -1,0 +1,23 @@
+<div>
+    {{#each recipes}}
+        <div style="border: 1px solid; margin:30px; padding:10px;">
+            <a href="{{video}}" target="_blank">
+                <h3>{{title}}</h3>
+            </a>
+            <h4>Descripción: </h4>
+            <p>{{description}}</p><br>
+            <h4>Ingredientes: </h4>
+            <p>{{ingredients}}</p><br>
+            <cite>{{timeago created_at}}</cite><br><br>
+            <button><a style="text-decoration: none;" href="/recipes/delete/{{id}}">Eliminar</a></button>
+            <button><a style="text-decoration: none;" href="/recipes/edit/{{id}}">Editar</a></button>
+        </div>
+    {{else}}
+        <center>
+            <div style="text: center;">
+                <p>There are not recipes saved yet.</p>
+                <a href="/recipes/add">Created One!</a>
+            </div>
+        </center>
+    {{/each}}
+</div>
