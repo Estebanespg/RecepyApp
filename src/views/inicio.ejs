@@ -4,22 +4,23 @@
 		<title>Recepy</title>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-		<%- include("partials/cabeza") %>
+		<%- include("partials/cabeza") %> <!-- Esto trae el componente cabezam, donde esta el meta, icono, etc -->
 	</head>
 	<body>
 		<!-- Cabecera -->
-		<%- include("partials/cabecera") %>
+		<%- include("partials/cabecera") %> <!-- Esto trae el componente cabecera, la barra roja -->
 
 		<div class="row">
 			<section class="col-1"></section>
 			<!-- Posts -->
 			
 				<section class="col-6 align-content-center text-center align-items-center">
-					<%images.forEach(function(image){%>
+					<!-- Esto renderiza **todas** las imagenes de la base de datos -->
+					<%images.forEach(function(image){%> 
 					<div class="card" style="width:100%; margin-top: 20px;">
 						<img class="card-img-top" src="<%-image.path%>" alt="Card image">
 						<div class="card-body" style="background-color: #E0E0E0">
-							<h3 class="card-title"><%-image.title%></h3>
+							<h3 class="card-title"> <%-image.title%></h3> <!-- Esto trae la información del post -->
 							<p class="card-text"></p>
 							<div class="row">
 								<div class="col-3"></div>

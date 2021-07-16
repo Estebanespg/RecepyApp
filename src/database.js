@@ -1,4 +1,4 @@
-const mongoose = require('mongoose');
+const mongoose = require('mongoose'); //Con mongoose nos conectamos a MongoDB
 
 mongoose.connect('mongodb://localhost/recepy', {
     useNewUrlParser: true

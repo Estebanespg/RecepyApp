@@ -1,6 +1,6 @@
 const { Schema, model } = require('mongoose');
 
-//Guardar datos de la imagen
+//Guardar datos de la imagen en MongoDB
 const imageSchema = new Schema({
     title: { type: String },
     description: { type: String },

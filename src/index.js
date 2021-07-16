@@ -1,8 +1,8 @@
 const express = require('express');
 const path = require('path');
 const morgan = require('morgan');
-const multer = require('multer');
-const { v4: uuidv4 } = require('uuid');
+const multer = require('multer'); //Multer ayuda a guardar las imagenes
+const { v4: uuidv4 } = require('uuid'); //uuidv4 sirve para renombrar las imagenes
 
 //Inicializaciones
 const recepy = express();
@@ -14,14 +14,14 @@ recepy.set('views', path.join(__dirname, 'views'));
 recepy.set('view engine', 'ejs');
 
 //Middlewares
-recepy.use(morgan('dev'));
+recepy.use(morgan('dev')); //Esto lleva las imagenes a uploads y les da un nombre y extención original
 recepy.use(express.urlencoded({extended: false}));
 const storage = multer.diskStorage({
     destination: path.join(__dirname, 'public/img/uploads'),
     filename: (req, file, cb, filename) => {
         cb(null, uuidv4() + path.extname(file.originalname));
     }
-});
+}); 
 recepy.use(multer({storage:storage}).single('image'));
 
 //Variables globales
