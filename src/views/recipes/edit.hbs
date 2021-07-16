@@ -1,0 +1,31 @@
+<center>
+    <h1>NEW RECIPE</h1>
+    <p>
+        Please enter your new recipe, please fill in the fields:
+        <br><br>
+        -Recipe Title<br>
+        -Description<br>
+        -Ingredients<br>
+        -Video<br>
+    </p>
+    <form action="/recipes/edit/{{recipe.id}}" method="POST">
+        <p>
+            Titulo: <br>
+            <input type="text" name="title" value="{{recipe.title}}" placeholder="Titulo de la Receta" size="30" autofocus>
+        </p>
+        <p>
+            Descripción: <br>
+            <textarea name="description" placeholder="Descripción de la Receta" rows="6" cols="50">{{recipe.description}}</textarea>
+        </p>
+        <p>
+            Ingredientes: <br>
+            <textarea name="ingredients" placeholder="Ingredientes de la Receta" rows="6" cols="50">{{recipe.ingredients}}</textarea>
+        </p>
+        <p>
+            Subir Video: <br>
+            <input type="file" name="video" value="{{recipe.video}}" accept=".mp4,.gif">
+        </p>
+        <br>
+        <button>Enviar</button>
+    </form>
+</center>

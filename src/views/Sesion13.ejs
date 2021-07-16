@@ -1,0 +1,13 @@
+<%images.forEach(function(image){%>
+    <div class="card" style="width:100%; margin-top: 20px;">
+        <img class="card-img-top" src="<%-image.path%>" alt="Card image">
+        <div class="card-body" style="background-color: #E0E0E0">
+            <h4 class="card-title">Información</h4>
+            <p class="card-text">Creado el: <%-image.created_at%></p>
+            <p class="card-text">Descripción: <%-image.description%></p>
+            <p class="card-text">Nombre del archivo: <%-image.filename%></p>
+            <p class="card-text">Pesa: <%-image.size%></p>
+            <p class="card-text">Nombre original: <%-image.originalname%></p>
+        </div>
+    </div>
+    <% }) %>
