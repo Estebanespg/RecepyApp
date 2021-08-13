@@ -1,0 +1,139 @@
+/*importing fonts from https://fonts.google.com/*/
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+/*background comoponent selection*/
+::selection{
+    background-color: #FFFFFF;
+    color: #000000;
+}
+/*black background and white font*/
+.theme-dark{
+    margin: 20px;
+    background-color: #000000;
+    color: #FFFFFF;
+}
+/*titles*/
+.title{
+    margin: 0;
+    font-size: 40px;
+    font-family: 'Roboto', sans-serif;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+/*subtitle*/
+.sub-title{
+    color: #222222;
+    margin: 0;
+    font-size: 30px;
+    font-family: 'Roboto', sans-serif;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+/*normal text*/
+.text{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    margin: 0;
+}
+/*gallery grid for the to torial*/
+.gallery-grid{
+    padding: auto;
+    height: fit-content;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 23%);
+    grid-template-rows: auto;
+    column-gap: 2%;
+    row-gap: 2%;
+    height: max-content;
+    margin-bottom: 100px;
+}
+/**/
+.img-grid-item{
+    width: 100%;
+    border: solid 5px #FFFFFF;
+    border-radius: 2%;
+    cursor: pointer;
+}
+.hover-animation:hover{
+    transform: scale(1.1);
+    transition-duration: 0.1s;
+    cursor: pointer;
+}
+/*container father*/
+.container{
+    width: 100%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+/*banner image, top in tutorial*/
+.banner-img-tutorial{
+    width: 100%;
+    height: 300px;
+    background: linear-gradient(to bottom, transparent, #000000), url("../img-src/gallery-src/bk-img-4.png");
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+.division{
+    width: 100%;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    height: 2px;
+    background-color: #FFFFFF;
+}
+.footer{
+    display: grid;
+    margin: auto;
+    width: fit-content;
+    height: fit-content;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.button{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    background-color: #222222;
+    width: 200px;
+    height: 40px;
+    border-radius: 5px;
+    font-size: 15px;
+    font-family: 'Roboto', sans-serif;
+    border:none;
+    color: #FFFFFF;
+    cursor: pointer;
+}
+.button:hover{
+    background-color: #FFFFFF;
+    color: #000000;
+    cursor: pointer;
+}
+.link{
+    text-decoration: none;
+    color: #FFFFFF;
+}
+.link:hover{
+    text-decoration: underline;
+}
+.line-grid{
+    display: grid;
+    height: 50px;
+    width: 100%;
+    grid-template-columns: 10% 35% 10% 35% 10%;
+    margin-bottom: 50px;
+}
+.link-local-line{
+    display: grid;
+    color: #000000;
+    font-family: Arial, Helvetica, sans-serif;   
+    text-decoration: none;
+    height: 100%;
+    width: 100%;
+}
+.button-line{
+    width: fit-content;
+    height: fit-content;
+    margin: auto;
+    background-color: #FFFFFF;
+    padding: 10px;
+    border-radius: 50%;
+}
